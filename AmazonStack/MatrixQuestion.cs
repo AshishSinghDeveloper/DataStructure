@@ -19,7 +19,7 @@ namespace AmazonStack
                     {
                         continue;
                     }
-                    sizes = TraverseNode(i, j, visited, matrix);
+                    //sizes = TraverseNode(i, j, visited, matrix);
                 }
             }
             return sizes;
