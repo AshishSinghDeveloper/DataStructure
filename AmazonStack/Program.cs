@@ -104,6 +104,16 @@ namespace AmazonStack
             m.RiverSize(river);
             #endregion
 
+            #region Inputs for BestTimeToBuyAndSellStock
+            BestTimeToBuyAndSellStock bestTimeToBuyAndSellStock = new BestTimeToBuyAndSellStock();
+            int[] stockPrice1 = new int[] { 7, 1, 5, 3, 6, 4 };
+            int[] stockPrice2 = new int[] { 7, 6, 4, 3, 1 };
+            int maxProfit1 = bestTimeToBuyAndSellStock.MaxProfit(stockPrice1);
+            Console.WriteLine("Max Profit Possible for StockPrice1: {0}", maxProfit1);
+            int maxProfit2 = bestTimeToBuyAndSellStock.MaxProfit(stockPrice2);
+            Console.WriteLine("Max Profit Possible for StockPrice2: {0}", maxProfit2);
+            #endregion
+
         }
     }
 }
