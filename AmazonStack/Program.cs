@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections;
+using System.Net.Http.Headers;
+using System.Runtime.InteropServices;
 
 namespace AmazonStack
 {
@@ -11,9 +13,9 @@ namespace AmazonStack
             //Related to first question
             BaseballHitGame P = new BaseballHitGame();
             string[] blocks = new string[] { "5", "-2", "4", "Z", "X", "9", "+", "+" }; //Input score of game 1
-            string[] blocks2 = new string[] { "1", "2", "+", "Z"}; //Input score of game 2
+            string[] blocks2 = new string[] { "1", "2", "+", "Z" }; //Input score of game 2
 
-            
+
 
             //Total score of first game
             int finalScore = P.CalculateScore(blocks, 8);
@@ -32,18 +34,18 @@ namespace AmazonStack
             nums1.Insert(3);
             nums1.Insert(1);
             nums1.Insert(2);
-            BSTNodeDistance.Node node =  nums1.Insert(4);
+            BSTNodeDistance.Node node = nums1.Insert(4);
 
             int nodeDistance = 0;
             int firstNodeValue = 2;
             int secondNodeValue = 4;
 
             //Get Lowest Common Ancestor between given values
-            BSTNodeDistance.Node lcaNode =  nums1.GetLowestCommonAncester(node, firstNodeValue, secondNodeValue);
+            BSTNodeDistance.Node lcaNode = nums1.GetLowestCommonAncester(node, firstNodeValue, secondNodeValue);
 
             //Get distance between two node
             int distancebetweenNode = nums1.GetDistanceFromLCA(lcaNode, firstNodeValue, nodeDistance) + nums1.GetDistanceFromLCA(lcaNode, secondNodeValue, nodeDistance);
-            Console.WriteLine("Distance between node {0} and node {1} is {2}",firstNodeValue, secondNodeValue, distancebetweenNode);
+            Console.WriteLine("Distance between node {0} and node {1} is {2}", firstNodeValue, secondNodeValue, distancebetweenNode);
 
             LongestSubStringWithRepeatingCharacter longest = new LongestSubStringWithRepeatingCharacter();
             longest.SlidingWindow("abccccef");
@@ -89,14 +91,14 @@ namespace AmazonStack
             #region Inputs for MatrixQuestion
             MatrixQuestion m = new MatrixQuestion();
             int[,] river = new int[,] { { 1, 0, 0, 1, 0 }, { 1, 0, 1, 0, 0 }, { 0, 0, 1, 0, 1 }, { 1, 0, 1, 0, 1 }, { 1, 0, 1, 1, 0 } };
-            
+
             int rowLen = river.GetLength(0);
             int colLen = river.GetLength(1);
             for (int i = 0; i < rowLen; i++)
             {
                 for (int j = 0; j < colLen; j++)
                 {
-                    Console.Write("{0} ",river[i,j]);
+                    Console.Write("{0} ", river[i, j]);
                 }
                 Console.WriteLine();
             }
@@ -106,7 +108,7 @@ namespace AmazonStack
             Console.Write("River Size: ");
             foreach (var size in riverSizes)
             {
-                Console.Write($" {size} " );
+                Console.Write($" {size} ");
             }
             Console.WriteLine();
             #endregion
@@ -121,8 +123,34 @@ namespace AmazonStack
             Console.WriteLine("Max Profit Possible for StockPrice2: {0}", maxProfit2);
             #endregion
 
-            #region Testing
+            #region Inputs for KClosestPointsToOrigin
+            int[][] points1 = new int[][] { 
+                new int[] { 1, 3 }, 
+                new int[] { -2, 2 } 
+            };
+            int[][] points2 = new int[][]
+            {
+                new int[] {3,3},
+                new int[] {5,-1},
+                new int[] {-2,4 }
+            };
+            KClosestPointsToOrigin kClosestPointsToOrigin = new KClosestPointsToOrigin();
+            int[][] points1ClosestToOrigin = kClosestPointsToOrigin.KClosest(points1, 1);
+            int[][] points2ClosestToOrigin = kClosestPointsToOrigin.KClosest(points2, 2);
+            Console.Write("Points1 closest to origin: ");
+            for(int i = 0; i< points1ClosestToOrigin.Length; i++)
+            {
+                Console.Write($"{points1ClosestToOrigin[i][0]}, {points1ClosestToOrigin[i][1]}  ");
+                    
+            }
+            Console.WriteLine();
+            Console.Write("Points2 closest to origin: ");
+            for (int i = 0; i < points2ClosestToOrigin.Length; i++)
+            {
+                Console.Write($"{points2ClosestToOrigin[i][0]}, {points2ClosestToOrigin[i][1]}  ");
 
+            }
+            Console.WriteLine();
             #endregion
 
         }
