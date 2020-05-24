@@ -121,6 +121,10 @@ namespace AmazonStack
             Console.WriteLine("Max Profit Possible for StockPrice2: {0}", maxProfit2);
             #endregion
 
+            #region Testing
+
+            #endregion
+
         }
     }
 }
