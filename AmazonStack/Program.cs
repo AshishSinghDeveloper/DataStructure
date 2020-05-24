@@ -88,7 +88,7 @@ namespace AmazonStack
 
             #region Inputs for MatrixQuestion
             MatrixQuestion m = new MatrixQuestion();
-            int[,] river = new int[,] { { 0, 0, 0, 1, 0 }, { 1, 0, 1, 0, 0 }, { 0, 0, 1, 0, 1 }, { 1, 0, 1, 0, 1 }, { 1, 0, 1, 1, 0 } };
+            int[,] river = new int[,] { { 1, 0, 0, 1, 0 }, { 1, 0, 1, 0, 0 }, { 0, 0, 1, 0, 1 }, { 1, 0, 1, 0, 1 }, { 1, 0, 1, 1, 0 } };
             
             int rowLen = river.GetLength(0);
             int colLen = river.GetLength(1);
@@ -102,6 +102,13 @@ namespace AmazonStack
             }
 
             m.RiverSize(river);
+            System.Collections.Generic.List<int> riverSizes = m.RiverSize(river);
+            Console.Write("River Size: ");
+            foreach (var size in riverSizes)
+            {
+                Console.Write($" {size} " );
+            }
+            Console.WriteLine();
             #endregion
 
             #region Inputs for BestTimeToBuyAndSellStock
