@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Net.Http.Headers;
 using System.Runtime.InteropServices;
 
@@ -151,6 +152,22 @@ namespace AmazonStack
 
             }
             Console.WriteLine();
+            #endregion
+
+            #region Inputs for ThreeNumberSum
+            ThreeNumberSum threeNumberSum = new ThreeNumberSum();
+            int[] numbers = new int[] { 12, 3, 1, 2, -6, 5, -8, 6 };
+            int target = 0;
+            List<List<int>> resultList = threeNumberSum.SumOfThreeNumber(numbers, target);
+            Console.WriteLine("Total combinations that has sum {0} are", target);
+            foreach (var result in resultList)
+            {
+                foreach (var item in result)
+                {
+                    Console.Write($" {item}");
+                }
+                Console.WriteLine();
+            }
             #endregion
 
         }
