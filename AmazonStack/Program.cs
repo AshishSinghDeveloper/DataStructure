@@ -170,6 +170,12 @@ namespace AmazonStack
             }
             #endregion
 
+            #region Inputs for Atoi
+            Atoi atoi = new Atoi();
+            int atoians = atoi.MyAtoi("   -0012a42");
+            Console.WriteLine("Atoi {0}",atoians);
+            #endregion
+
         }
     }
 }
