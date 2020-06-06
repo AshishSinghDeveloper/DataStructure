@@ -204,6 +204,21 @@ namespace AmazonStack
              var bstromove = bSTOperation.Remove(nodeToRemoveBST, bSTOperation);
             #endregion
 
+            #region Input for BSTValidation
+            ValidateBST.BST bst = new ValidateBST.BST(10);
+            ValidateBST.BST insert = bst.Insert(5, bst)
+                .Insert(15, bst)
+                .Insert(2, bst)
+                .Insert(5, bst)
+                .Insert(13, bst)
+                .Insert(22, bst)
+                .Insert(1, bst)
+                .Insert(12, bst)
+                .Insert(14, bst);
+            ValidateBST validateBST = new ValidateBST();
+            validateBST.ValidateBinarySearchTree(bst);
+            #endregion
+
         }
     }
 }
