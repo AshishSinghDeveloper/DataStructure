@@ -219,6 +219,47 @@ namespace AmazonStack
             validateBST.ValidateBinarySearchTree(bst);
             #endregion
 
+            #region
+            BSTTraversal bSTTraversal = new BSTTraversal();
+            BSTTraversal.BST root = new BSTTraversal.BST(10);
+            root.left = new BSTTraversal.BST(5);
+            root.left.left = new BSTTraversal.BST(2);
+            root.left.right = new BSTTraversal.BST(5);
+            root.left.left.left = new BSTTraversal.BST(1);
+            root.right = new BSTTraversal.BST(15);
+            root.right.left = new BSTTraversal.BST(13);
+            root.right.right = new BSTTraversal.BST(22);
+            root.right.left.left = new BSTTraversal.BST(12);
+            root.right.left.right = new BSTTraversal.BST(14);
+
+            List<int> nodeValue = new List<int>();
+            nodeValue = bSTTraversal.InOrderTraverse(root, nodeValue);
+            Console.Write("In-Order: ");
+            foreach (var item in nodeValue)
+            {
+                Console.Write($"{item} ");
+            }
+            Console.WriteLine();
+            nodeValue.Clear();
+
+            nodeValue = bSTTraversal.PreOrderTraverse(root, nodeValue);
+            Console.Write("Pre-Order: ");
+            foreach (var item in nodeValue)
+            {
+                Console.Write($"{item} ");
+            }
+            Console.WriteLine();
+            nodeValue.Clear();
+
+            nodeValue = bSTTraversal.PostOrderTraverse(root, nodeValue);
+            Console.Write("Post-Order: ");
+            foreach (var item in nodeValue)
+            {
+                Console.Write($"{item} ");
+            }
+            Console.WriteLine();
+            #endregion
+
         }
     }
 }
