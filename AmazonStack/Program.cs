@@ -176,14 +176,6 @@ namespace AmazonStack
             Console.WriteLine("Atoi {0}",atoians);
             #endregion
 
-            #region Input for SmallestDifference
-            int[] A = new int[] {-1,5,10,20,28,3 };
-            int[] B = new int[] {15, 17, 26, 134, 135 };
-            SmallestDifference smallestDifference = new SmallestDifference();
-            int[] resultSM = smallestDifference.SmallestNumber(B, A);
-            Console.WriteLine("{0} and {1} has smallest difference.", resultSM[0], resultSM[1]);
-            #endregion
-
         }
     }
 }
