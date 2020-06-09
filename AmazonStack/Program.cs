@@ -261,6 +261,9 @@ namespace AmazonStack
                 Console.Write($"{item} ");
             }
             Console.WriteLine();
+<<<<<<< HEAD
+>>>>>>> parent of 9978818... Invert Binary Tree using List as Queue.
+=======
 >>>>>>> parent of 9978818... Invert Binary Tree using List as Queue.
             #endregion
 
