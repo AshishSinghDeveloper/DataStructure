@@ -204,67 +204,6 @@ namespace AmazonStack
              var bstromove = bSTOperation.Remove(nodeToRemoveBST, bSTOperation);
             #endregion
 
-            #region Input for BSTValidation
-            ValidateBST.BST bst = new ValidateBST.BST(10);
-            ValidateBST.BST insert = bst.Insert(5, bst)
-                .Insert(15, bst)
-                .Insert(2, bst)
-                .Insert(5, bst)
-                .Insert(13, bst)
-                .Insert(22, bst)
-                .Insert(1, bst)
-                .Insert(12, bst)
-                .Insert(14, bst);
-            ValidateBST validateBST = new ValidateBST();
-            validateBST.ValidateBinarySearchTree(bst);
-            #endregion
-
-            #region Input for BSTTraversal
-            BSTTraversal bSTTraversal = new BSTTraversal();
-            BSTTraversal.BST root = new BSTTraversal.BST(10);
-            root.left = new BSTTraversal.BST(5);
-            root.left.left = new BSTTraversal.BST(2);
-            root.left.right = new BSTTraversal.BST(5);
-            root.left.left.left = new BSTTraversal.BST(1);
-            root.right = new BSTTraversal.BST(15);
-            root.right.left = new BSTTraversal.BST(13);
-            root.right.right = new BSTTraversal.BST(22);
-            root.right.left.left = new BSTTraversal.BST(12);
-            root.right.left.right = new BSTTraversal.BST(14);
-
-            List<int> nodeValue = new List<int>();
-            nodeValue = bSTTraversal.InOrderTraverse(root, nodeValue);
-            Console.Write("In-Order: ");
-            foreach (var item in nodeValue)
-            {
-                Console.Write($"{item} ");
-            }
-            Console.WriteLine();
-            nodeValue.Clear();
-
-            nodeValue = bSTTraversal.PreOrderTraverse(root, nodeValue);
-            Console.Write("Pre-Order: ");
-            foreach (var item in nodeValue)
-            {
-                Console.Write($"{item} ");
-            }
-            Console.WriteLine();
-            nodeValue.Clear();
-
-            nodeValue = bSTTraversal.PostOrderTraverse(root, nodeValue);
-            Console.Write("Post-Order: ");
-            foreach (var item in nodeValue)
-            {
-                Console.Write($"{item} ");
-            }
-            Console.WriteLine();
-            #endregion
-
-            #region Input for InvertBinaryTree
-            InvertBinaryTree.BinaryTree tree = new InvertBinaryTree.BinaryTree(1);
-            //tree.insert()
-            #endregion
-
         }
     }
 }
