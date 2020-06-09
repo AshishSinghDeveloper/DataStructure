@@ -184,26 +184,6 @@ namespace AmazonStack
             Console.WriteLine("{0} and {1} has smallest difference.", resultSM[0], resultSM[1]);
             #endregion
 
-            #region Input for BSTOperation
-            BSTOperation.BST bSTOperation = new BSTOperation.BST(10);
-            BSTOperation.BST bstInsertion = bSTOperation.Insert(5, bSTOperation)
-                .Insert(15,bSTOperation)
-                .Insert(2, bSTOperation)
-                .Insert(5, bSTOperation)
-                .Insert(13, bSTOperation)
-                .Insert(22, bSTOperation)
-                .Insert(1, bSTOperation)
-                .Insert(12, bSTOperation)
-                .Insert(14, bSTOperation);
-
-            int nodeToSearchBST = 16;
-            bool bstSearch = bSTOperation.Contains(nodeToSearchBST, bSTOperation);
-            Console.WriteLine("{0} exists in this BST: {1}", nodeToSearchBST, bstSearch);
-
-            int nodeToRemoveBST = 10;
-             var bstromove = bSTOperation.Remove(nodeToRemoveBST, bSTOperation);
-            #endregion
-
         }
     }
 }
