@@ -173,7 +173,95 @@ namespace AmazonStack
             #region Inputs for Atoi
             Atoi atoi = new Atoi();
             int atoians = atoi.MyAtoi("   -0012a42");
+<<<<<<< HEAD
             Console.WriteLine("Atoi {0}",atoians);
+=======
+            Console.WriteLine("Atoi {0}",atoians);
+            #endregion
+
+            #region Input for SmallestDifference
+            int[] A = new int[] {-1,5,10,20,28,3 };
+            int[] B = new int[] {15, 17, 26, 134, 135 };
+            SmallestDifference smallestDifference = new SmallestDifference();
+            int[] resultSM = smallestDifference.SmallestNumber(B, A);
+            Console.WriteLine("{0} and {1} has smallest difference.", resultSM[0], resultSM[1]);
+            #endregion
+
+            #region Input for BSTOperation
+            BSTOperation.BST bSTOperation = new BSTOperation.BST(10);
+            BSTOperation.BST bstInsertion = bSTOperation.Insert(5, bSTOperation)
+                .Insert(15,bSTOperation)
+                .Insert(2, bSTOperation)
+                .Insert(5, bSTOperation)
+                .Insert(13, bSTOperation)
+                .Insert(22, bSTOperation)
+                .Insert(1, bSTOperation)
+                .Insert(12, bSTOperation)
+                .Insert(14, bSTOperation);
+
+            int nodeToSearchBST = 16;
+            bool bstSearch = bSTOperation.Contains(nodeToSearchBST, bSTOperation);
+            Console.WriteLine("{0} exists in this BST: {1}", nodeToSearchBST, bstSearch);
+
+            int nodeToRemoveBST = 10;
+             var bstromove = bSTOperation.Remove(nodeToRemoveBST, bSTOperation);
+            #endregion
+
+            #region Input for BSTValidation
+            ValidateBST.BST bst = new ValidateBST.BST(10);
+            ValidateBST.BST insert = bst.Insert(5, bst)
+                .Insert(15, bst)
+                .Insert(2, bst)
+                .Insert(5, bst)
+                .Insert(13, bst)
+                .Insert(22, bst)
+                .Insert(1, bst)
+                .Insert(12, bst)
+                .Insert(14, bst);
+            ValidateBST validateBST = new ValidateBST();
+            validateBST.ValidateBinarySearchTree(bst);
+            #endregion
+
+            #region
+            BSTTraversal bSTTraversal = new BSTTraversal();
+            BSTTraversal.BST root = new BSTTraversal.BST(10);
+            root.left = new BSTTraversal.BST(5);
+            root.left.left = new BSTTraversal.BST(2);
+            root.left.right = new BSTTraversal.BST(5);
+            root.left.left.left = new BSTTraversal.BST(1);
+            root.right = new BSTTraversal.BST(15);
+            root.right.left = new BSTTraversal.BST(13);
+            root.right.right = new BSTTraversal.BST(22);
+            root.right.left.left = new BSTTraversal.BST(12);
+            root.right.left.right = new BSTTraversal.BST(14);
+
+            List<int> nodeValue = new List<int>();
+            nodeValue = bSTTraversal.InOrderTraverse(root, nodeValue);
+            Console.Write("In-Order: ");
+            foreach (var item in nodeValue)
+            {
+                Console.Write($"{item} ");
+            }
+            Console.WriteLine();
+            nodeValue.Clear();
+
+            nodeValue = bSTTraversal.PreOrderTraverse(root, nodeValue);
+            Console.Write("Pre-Order: ");
+            foreach (var item in nodeValue)
+            {
+                Console.Write($"{item} ");
+            }
+            Console.WriteLine();
+            nodeValue.Clear();
+
+            nodeValue = bSTTraversal.PostOrderTraverse(root, nodeValue);
+            Console.Write("Post-Order: ");
+            foreach (var item in nodeValue)
+            {
+                Console.Write($"{item} ");
+            }
+            Console.WriteLine();
+>>>>>>> parent of 9978818... Invert Binary Tree using List as Queue.
             #endregion
 
         }
