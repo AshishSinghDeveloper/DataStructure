@@ -219,7 +219,7 @@ namespace AmazonStack
             validateBST.ValidateBinarySearchTree(bst);
             #endregion
 
-            #region
+            #region Input for BSTTraversal
             BSTTraversal bSTTraversal = new BSTTraversal();
             BSTTraversal.BST root = new BSTTraversal.BST(10);
             root.left = new BSTTraversal.BST(5);
@@ -258,6 +258,11 @@ namespace AmazonStack
                 Console.Write($"{item} ");
             }
             Console.WriteLine();
+            #endregion
+
+            #region Input for InvertBinaryTree
+            InvertBinaryTree.BinaryTree tree = new InvertBinaryTree.BinaryTree(1);
+            //tree.insert()
             #endregion
 
         }
