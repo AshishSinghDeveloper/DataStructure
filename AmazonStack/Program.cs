@@ -273,6 +273,15 @@ namespace AmazonStack
             amazonQuestion2.reorderLines(5, logfiles.ToArray());
             #endregion
 
+            #region Input for TimePlnner
+            int[,] slotA = new int[,] { { 10, 50 }, { 60, 120 }, { 140, 210 } };
+            int[,] slotB = new int[,] { { 0, 15 }, { 60, 70 } };
+            int duration = 8;
+            TimePlanner timePlanner = new TimePlanner();
+            int[] matchingTime = timePlanner.TimeMatch(slotA, slotB, duration);
+            Console.WriteLine($"Matching time is [{matchingTime[0]}, {matchingTime[1]}]");
+            #endregion
+
         }
     }
 }
