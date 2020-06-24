@@ -221,7 +221,7 @@ namespace AmazonStack
             validateBST.ValidateBinarySearchTree(bst);
             #endregion
 
-            #region
+            #region Input for BST Traversal
             BSTTraversal bSTTraversal = new BSTTraversal();
             BSTTraversal.BST root = new BSTTraversal.BST(10);
             root.left = new BSTTraversal.BST(5);
@@ -260,6 +260,17 @@ namespace AmazonStack
                 Console.Write($"{item} ");
             }
             Console.WriteLine();
+            #endregion
+
+            #region AmazonQ2 (Reorder Logfiles)
+            List<string> logfiles = new List<string>();
+            logfiles.Add("a1 9 2 3 1");
+            logfiles.Add("g1 act car");
+            logfiles.Add("zo4 4 7");
+            logfiles.Add("ab1 off key dog");
+            logfiles.Add("a8 act zoo");
+            AmazonQuestion2 amazonQuestion2 = new AmazonQuestion2();
+            amazonQuestion2.reorderLines(5, logfiles.ToArray());
             #endregion
 
         }
