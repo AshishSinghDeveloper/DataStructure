@@ -173,9 +173,8 @@ namespace AmazonStack
             #region Inputs for Atoi
             Atoi atoi = new Atoi();
             int atoians = atoi.MyAtoi("   -0012a42");
-<<<<<<< HEAD
+
             Console.WriteLine("Atoi {0}",atoians);
-=======
             Console.WriteLine("Atoi {0}",atoians);
             #endregion
 
@@ -261,10 +260,6 @@ namespace AmazonStack
                 Console.Write($"{item} ");
             }
             Console.WriteLine();
-<<<<<<< HEAD
->>>>>>> parent of 9978818... Invert Binary Tree using List as Queue.
-=======
->>>>>>> parent of 9978818... Invert Binary Tree using List as Queue.
             #endregion
 
         }
