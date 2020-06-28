@@ -282,6 +282,20 @@ namespace AmazonStack
             Console.WriteLine($"Matching time is [{matchingTime[0]}, {matchingTime[1]}]");
             #endregion
 
+            #region Input for Kadane's Algo
+            int[] array = new int[] { 8, 5, -9, 1, 3, -2, 3, 4, 7, 2, -18, 6, 3, 1, -5, 6, 20, -23, 15, 1, -3, 4 };
+            int[] array2 = new int[] { -1, -2, -3, -4, -5, -6, -7, -8, -9, -10 };
+            KadaneAlgo kadaneAlgo = new KadaneAlgo();
+            int maxSum = kadaneAlgo.KadaneAlgorithm(array);
+            Console.WriteLine("Max Sum of given array is: {0}", maxSum);
+            #endregion
+
+            #region Input for SingleCycleCheck
+            int[] sccArray = new int[] { 2, 2, -1 };
+            SingleCycleCheck singleCycleCheck = new SingleCycleCheck();
+            singleCycleCheck.HasSingleCycle(sccArray);
+            #endregion
+
         }
     }
 }
