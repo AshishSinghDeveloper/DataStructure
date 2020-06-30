@@ -296,6 +296,11 @@ namespace AmazonStack
             singleCycleCheck.HasSingleCycle(sccArray);
             #endregion
 
+            #region Input for RootofNumber
+            RootofNumber rootofNumber = new RootofNumber();
+            rootofNumber.Root(9, 2);
+            #endregion
+
         }
     }
 }
