@@ -301,6 +301,13 @@ namespace AmazonStack
             rootofNumber.Root(9, 2);
             #endregion
 
+            #region Input for GetDifferentNum
+            GetDifferentNum getDifferentNum = new GetDifferentNum();
+            int[] arrayForGetDiffNum = new int[] { 4, 5, 0, 3, 9, 7, 15 };
+            int answer = getDifferentNum.GetDifferentNumber(arrayForGetDiffNum);
+            //Expected answer for [4, 5, 0, 3, 9, 7, 15] is 1 since it is lowest positive number which does not present in array
+            #endregion
+
         }
     }
 }
