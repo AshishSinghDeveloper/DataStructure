@@ -64,7 +64,7 @@ namespace AmazonStack
 
             AddLinkedListNumber.ListNode nodeOne = new AddLinkedListNumber.ListNode();
             nodeOne.val = 5;
-            nodeOne.next = null;
+            nodeOne.next = nodeTwo;
 
             AddLinkedListNumber.ListNode firstList = new AddLinkedListNumber.ListNode();
             firstList = nodeOne;
@@ -80,7 +80,7 @@ namespace AmazonStack
 
             AddLinkedListNumber.ListNode node2One = new AddLinkedListNumber.ListNode();
             node2One.val = 5;
-            node2One.next = null;
+            node2One.next = node2Two;
 
             AddLinkedListNumber.ListNode secondList = new AddLinkedListNumber.ListNode();
             secondList = node2One;
