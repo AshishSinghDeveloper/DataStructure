@@ -3,6 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+//Quesion: River Sizes (from Algo EXPERT)
+//You're given a two-dimensional array (a matrix) of potentially unequal height and width containing only o s and 1 s.
+//A Each 0 represents land, and each 1 represents part of a river.
+//A river consists 1 s that are either horizontally or vertically adjacent (but not diagonally adjacent).
+//The number of adjacent 1 s forming a river determine its size.
+
+//Write a function that returns an array of the sizes of all rivers represented in the input matrix.
+//The sizes don't need to be in any particular order.
+
+//Sample Input
+//matrix = [
+//(1, 0, 0, 1, 0),
+//[1, 0, 1, 0, 0],
+//[0, 0, 1, 0, 1),
+//[1, 0, 1, 0, 1).
+//[1, 0, 1, 1, 0],
+
+//Sample Input
+//[1,2,2,2,5] //the numbers could be ordered differently.
+
 namespace AmazonStack
 {
     public class AmazonQuestion1
