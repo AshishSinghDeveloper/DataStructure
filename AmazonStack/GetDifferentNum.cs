@@ -1,4 +1,22 @@
 ﻿using System;
+//------------------------------------------------------------------------------------------------------------------------------------------------------
+//Question: Getting a different number (Pramp)
+//Given an array arr of unique nonnegative integers, implement a function getDifferentNumber that finds the smallest nonnegative integer that is NOT in the array.
+
+//Example:
+
+//input:  arr = [0, 1, 2, 3]
+
+//output: 4
+
+//Constraints:
+//[time limit] 5000ms
+
+//[input] array.integer arr
+//  - 1 ≤ arr.length ≤ MAX_INT
+//  - 0 ≤ arr[i] ≤ MAX_INT for every i, 0 ≤ i<MAX_INT
+//[output] integer
+//------------------------------------------------------------------------------------------------------------------------------------------------------
 namespace AmazonStack
 {
     //Time: O(n) and Space: O(1) where n is length of array
@@ -37,10 +55,10 @@ namespace AmazonStack
                 }
             }
             //Now start = end
-            if (start == 0 && arr[start] == start) return ++start;
-            else if (start == 0) return 0;
-            else if (start == arr.Length - 1 && start == arr[start]) return ++start;
-            else return arr[start - 1] + 1;           
+            if (start == 0 && arr[start] == start) return ++start; //when array has only one element 0
+            else if (start == 0) return 0; //when array has no element
+            else if (start == arr.Length - 1 && start == arr[start]) return ++start;//when start reach to last element and number in its index position
+            else return arr[start - 1] + 1; //general case          
         }
     }
 }
