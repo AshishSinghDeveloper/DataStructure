@@ -1,6 +1,28 @@
 ﻿using System;
 namespace AmazonStack
-{
+//------------------------------------------------------------------------------------------------------------------------------------------------------
+//Question: Root of Number (Pramp)
+//In this question we’ll implement a function root that calculates the n’th root of a number.
+//The function takes a nonnegative number x and a positive integer n, and returns the positive n’th root of x within an error of 0.001
+//  (i.e.suppose the real root is y, then the error is: |y-root(x, n)| and must satisfy |y-root(x, n)| < 0.001).
+
+//Example:
+//  input:  x = 7, n = 3
+//  output: 1.913
+
+//Example:
+//  input:  x = 9, n = 2
+//  output: 3
+
+//Constraints:
+//[time limit] 5000ms
+//[input] float x
+//      0 ≤ x
+//[input] integer n
+//       < n
+//[output] float
+//------------------------------------------------------------------------------------------------------------------------------------------------------
+{ 
     public class RootofNumber
     {
         public float Root(int num, int root)

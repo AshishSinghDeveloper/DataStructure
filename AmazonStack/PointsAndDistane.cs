@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Text;
-
+//------------------------------------------------------------------------------------------------------------------------------------------------------
+//This is class used by KClosestPointsToOrigin
+//------------------------------------------------------------------------------------------------------------------------------------------------------
 namespace AmazonStack
 {
     public class PointsAndDistane : IComparable<PointsAndDistane>
