@@ -46,7 +46,7 @@ namespace AmazonStack
             Console.WriteLine("Distance between node {0} and node {1} is {2}", firstNodeValue, secondNodeValue, distancebetweenNode);
 
             LongestSubStringWithRepeatingCharacter longest = new LongestSubStringWithRepeatingCharacter();
-            longest.SlidingWindow("abccccef");
+            longest.LengthOfLongestSubstring("abccccef");
             #endregion
 
             #region Inputs for AddLinkedListNumber
