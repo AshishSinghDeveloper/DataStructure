@@ -1,7 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+//------------------------------------------------------------------------------------------------------------------------------------------------------
+//Question: Smallest Difference (algoExpert)
+//Write a function that takes in two non-empty arrays of integers,
+//  find the pair of numbers(one from each array) whose absolute difference is closest to zero,
+//  and returns an array containing these two numbers, with the number from the first array in the first position.
 
+//You can assume that there will only be one pair of numbers with the smallest difference.
+
+//Sample Input
+//arrayOne = [-1, 5, 10, 20, 28 3]
+//arrayTwo = [26, 134, 135, 15, 17]
+
+//Sample Output
+//[28, 26)
+//------------------------------------------------------------------------------------------------------------------------------------------------------
 namespace AmazonStack
 {
     public class SmallestDifference
@@ -24,7 +36,7 @@ namespace AmazonStack
 					answer[1] = B[j];
 				}
 				if (A[I] < B[j]) I++;
-				else if (A[I] > B[j]) j++;
+				else j++;
 			}
             return answer;
 		}
