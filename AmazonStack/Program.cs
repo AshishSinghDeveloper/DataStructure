@@ -155,7 +155,7 @@ namespace AmazonStack
             ThreeNumberSum threeNumberSum = new ThreeNumberSum();
             int[] numbers = new int[] { 12, 3, 1, 2, -6, 5, -8, 6 };
             int target = 0;
-            List<List<int>> resultList = threeNumberSum.SumOfThreeNumber(numbers, target);
+            List<int[]> resultList = threeNumberSum.SumOfThreeNumber(numbers, target);
             Console.WriteLine("Total combinations that has sum {0} are", target);
             foreach (var result in resultList)
             {
