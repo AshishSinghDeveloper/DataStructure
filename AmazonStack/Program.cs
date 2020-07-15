@@ -305,6 +305,13 @@ namespace AmazonStack
             //Expected answer for [4, 5, 0, 3, 9, 7, 15] is 1 since it is lowest positive number which does not present in array
             #endregion
 
+            #region Input for LongestPeak
+            int[] arrayForLongestpeak = new[] { 1, 1, 3, 2, 1 };
+            LongestPeak longestPeak = new LongestPeak();
+            int longestPeakArray = longestPeak.LongestPeakQues(arrayForLongestpeak);
+            Console.WriteLine($"The count of Peak Array is {longestPeakArray}");
+            #endregion
+
         }
     }
 }
