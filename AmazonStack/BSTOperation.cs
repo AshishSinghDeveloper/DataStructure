@@ -1,4 +1,4 @@
-﻿ using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -141,10 +141,15 @@ namespace AmazonStack
 
 			//Average: O(log(n)) time | O(1) space
 			//worst: O(n) time | O(1) space
-			public BST Remove(int value, BST root, BST parentNode = null)
+			public BST Remove(int value)
 			{
-				var current = root;
-				//BST parentNode = null;
+				Remove(value, null);
+				return this;
+			}
+
+			public void Remove(int value, BST parentNode)
+			{
+				BST current = this;
 				while (current != null)
 				{
 					if (value < current.value)
@@ -157,61 +162,58 @@ namespace AmazonStack
 						parentNode = current;
 						current = current.right;
 					}
-                    else //Value found. It is in current node
-                    {
-						//When node we want to delete has both child. This could be root note too
-						if(current.left != null && current.right != null)
-                        {
+					else
+					{
+						//when both nodes exists
+						if (current.left != null && current.right != null)
+						{
 							var minRight = current.right;
 							while (minRight.left != null)
 							{
 								minRight = minRight.left;
 							}
-							current.right.Remove(minRight.value, current);
 							current.value = minRight.value;
-							break;
-							
+							current.right.Remove(minRight.value, current);
+							//break;
 						}
-						//When node we want to delete the root node whose only one child exists
+
+						//when parent noden has only one child
 						else if (parentNode == null)
-                        {
-							if(current.left != null)
-                            {
+						{
+							if (current.left != null)
+							{
 								var leftNode = current.left;
 								current.value = leftNode.value;
 								current.left = leftNode.left;
 								current.right = leftNode.right;
-								break;
-                            }
+								//break;
+							}
 							else if (current.right != null)
-                            {
+							{
 								var rightNode = current.right;
 								current.value = rightNode.value;
 								current.left = rightNode.left;
 								current.right = rightNode.right;
-								break;
-                            }
-                            else //when root note is only node in the tree.
-                            {
-								current = null;//this technically not doing anything. You can do current.value = 0;
-								break;
-                            }
-                        }
-						//when we want to delete node which is not root node and only has left child
-						else if(parentNode.left == current)
-                        {
-							parentNode.left = current.left ?? current.right;
-							break;
-                        }
-						//when we want to delete node which ic not root node and only has right child
-						else if(parentNode.right == current)
-                        {
-							parentNode.right = current.left ?? current.right;
-							break;
-                        }
-                    }
+								//break;
+							}
+							else
+							{
+							}
+						}
+						//not parent but has only left child
+						else if (parentNode.left == current)
+						{
+							//parentNode.left = current.left ?? current.right;
+							parentNode.left = current.left != null ? current.left : current.right;
+						}
+						else if (parentNode.right == current)
+						{
+							//parentNode.right = current.left ?? current.right;
+							parentNode.right = current.left != null ? current.left : current.right;
+						}
+						break;
+					}
 				}
-				return this;
 			}
 		}
 	}
