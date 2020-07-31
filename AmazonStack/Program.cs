@@ -200,12 +200,13 @@ namespace AmazonStack
             Console.WriteLine("{0} exists in this BST: {1}", nodeToSearchBST, bstSearch);
 
             int nodeToRemoveBST = 10;
-             var bstromove = bSTOperation.Remove(nodeToRemoveBST, bSTOperation);
+             var bstromove = bSTOperation.Remove(nodeToRemoveBST);
             #endregion
 
             #region Input for BSTValidation
-            ValidateBST.BST bst = new ValidateBST.BST(10);
-            ValidateBST.BST insert = bst.Insert(5, bst)
+            //ValidateBST.BST bst = new ValidateBST.BST(10);
+            BST bst = new BST(10);
+            BST insert = bst.Insert(5, bst)
                 .Insert(15, bst)
                 .Insert(2, bst)
                 .Insert(5, bst)
@@ -312,6 +313,12 @@ namespace AmazonStack
             Console.WriteLine($"The count of Peak Array is {longestPeakArray}");
             #endregion
 
+            #region Input for FindClosestValueInBST
+
+            FindClosestValueInBst findClosestValueInBst = new FindClosestValueInBst();
+            
+            findClosestValueInBst.FindClosestValueInBstQues(bst,12);
+            #endregion
         }
     }
 }
