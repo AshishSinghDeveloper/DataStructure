@@ -45,5 +45,56 @@ namespace AmazonStack
 			}
 			return this;
 		}
+
+		public BST Insert(int value)
+		{
+			BST current = this;
+			BST node = new BST(value);
+			while (current != null)
+			{
+				if (current.value > value)
+				{
+					if (current.left == null)
+					{
+						current.left = node;
+						break;
+					}
+					else
+					{
+						current = current.left;
+					}
+
+				}
+				else
+				{
+					if (current.right == null)
+					{
+						current.right = node;
+						break;
+					}
+					else
+					{
+						current = current.right;
+					}
+				}
+			}
+			return this;
+		}
+
+		public bool Contains(int value)
+		{
+			BST current = this;
+			while (current != null)
+			{
+				if (value > current.value)
+					current = current.right;
+				else if (value < current.value)
+					current = current.left;
+				else
+					return true;
+			}
+			return false;
+		}
 	}
+
 }
