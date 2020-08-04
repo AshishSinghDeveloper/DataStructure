@@ -319,6 +319,11 @@ namespace AmazonStack
             
             findClosestValueInBst.FindClosestValueInBstQues(bst,12);
             #endregion
+
+            #region
+            MinHeightBST minHeightBST = new MinHeightBST();
+            minHeightBST.MinHeight(new List<int> {1, 2, 5, 7, 10, 13, 14, 15, 22});
+            #endregion
         }
     }
 }
