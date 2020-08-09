@@ -320,9 +320,15 @@ namespace AmazonStack
             findClosestValueInBst.FindClosestValueInBstQues(bst,12);
             #endregion
 
-            #region
+            #region Input for Min Height BST
             MinHeightBST minHeightBST = new MinHeightBST();
             minHeightBST.MinHeight(new List<int> {1, 2, 5, 7, 10, 13, 14, 15, 22});
+            #endregion
+
+            #region Input for Branch Sums
+            BranchSums branchSums = new BranchSums();
+            var continuousBT = new BinaryTree();
+            branchSums.BranchSum(continuousBT.SimpleBinaryTree());
             #endregion
         }
     }
