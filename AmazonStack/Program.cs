@@ -330,6 +330,11 @@ namespace AmazonStack
             var continuousBT = new BinaryTree();
             branchSums.BranchSum(continuousBT.SimpleBinaryTree());
             #endregion
+
+            #region Input for Node Depth
+            NodeDepth nodeDepth = new NodeDepth();
+            int sumOfNodeDepth = nodeDepth.GetDepthSum(continuousBT.SimpleBinaryTree());
+            #endregion
         }
     }
 }

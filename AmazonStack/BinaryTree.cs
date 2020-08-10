@@ -60,8 +60,6 @@ namespace AmazonStack
             binaryTree.ContinuousInsert(9);
             binaryTree.ContinuousInsert(10);
             binaryTree.ContinuousInsert(11);
-
-
             return binaryTree;
         }
     }
